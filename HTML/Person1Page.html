@@ -1,13 +1,13 @@
 ﻿<!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <meta charset="utf-8" />
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/Content/StyleSheet1.css">  <!-- External CSS reference -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet"> <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="/Content/StyleSheet1.css"> <!-- External CSS reference -->
     <title>Person 1 - Jose Edu</title>
 </head>
 <body>
-
 
     <div class="menu">
         <ul class="nav">
@@ -22,53 +22,57 @@
         </ul>
     </div>
 
-
-
-    <!-- Biography and Background -->
-    <div class="container">
-        <h2>Biography and Background</h2>
-        <div class="FirstBlock">
-            <img src="Images/steve-rogers.jpg">
-            <p>Jose was born in Mexico, and went to school in New Mexico. He studies Bcom Data Science because there is good work opportunities in the field</p>
-        </div>
-    </div>
-
-    <!-- Hobbies -->
-    <div class="container">
-        <h2>Hobbies</h2>
-        <div class="SecondBlock">
-            <p>Jose enjoys star gazing</p>
-            <img src="Images/Starsinthesky.jpg">
-        </div>
-    </div>
-
-    <!-- Modules -->
-   
-    <div class = "container">
-
-        <div class="modules">
-            <h2>Modules</h2>
-
-            <div class="modules-container">
-                <div class="column">
-                    <h3>Modules Semester 1</h3>
-                    <ul>
-                        <li>STK 11</li>
-                        <li>STK 12</li>
-                        <li>STK 13</li>
-                    </ul>
+    <div class="container mt-5">
+        <div class="row">
+            <!-- Biography and Background Section -->
+            <div class="col-lg-4 col-md-6 mb-4">
+                <h2>Biography and Background</h2>
+                <div class="FirstBlock">
+                    <img src="Images/steve-rogers.jpg" class="img-fluid" alt="Steve Rogers">
+                    <p>Jose was born in Mexico, and went to school in New Mexico. He studies Bcom Data Science because there are good work opportunities in the field.</p>
                 </div>
-                <div class="column">
-                    <h3>Modules Semester 2</h3>
-                    <ul>
-                        <li>STK 21</li>
-                        <li>STK 22</li>
-                        <li>STK 23</li>
-                    </ul>
+            </div>
+            
+
+            <!-- Hobbies Section -->
+            <div class="col-lg-4 col-md-6 mb-4">
+                <h2>Hobbies</h2>
+                <div class="SecondBlock">
+                    <p>Jose enjoys star gazing.</p>
+                    <img src="Images/Starsinthesky.jpg" class="img-fluid" alt="Stars in the sky">
+                </div>
+            </div>
+
+            <!-- Modules Section -->
+            <div class="col-lg-4 col-md-6 mb-4">
+                <h2>Modules</h2>
+                <div class="modules">
+                    <div class="modules-container">
+                        <div class="column">
+                            <h3>Modules Semester 1</h3>
+                            <ul>
+                                <li>STK 11</li>
+                                <li>STK 12</li>
+                                <li>STK 13</li>
+                            </ul>
+                        </div>
+                        <div class="column">
+                            <h3>Modules Semester 2</h3>
+                            <ul>
+                                <li>STK 21</li>
+                                <li>STK 22</li>
+                                <li>STK 23</li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
+
+    <!-- Bootstrap and jQuery JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
     <!-- JavaScript to manage active link and dynamic behavior -->
     <script>
@@ -89,6 +93,7 @@
                     link.classList.add('active-link');
                 }
             });
-        });</script>
+        });
+    </script>
 </body>
 </html>
