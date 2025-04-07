@@ -42,19 +42,31 @@
         </tbody>
     </table>
 
+
+    <!-- JavaScript to remove row -->
+    <script>
+        function deleteRow(button) {
+            const row = button.closest('tr');
+            if (row) {
+                row.remove();
+            }
+        }
+    </script>
+
+    <!-- JavaScript to highlight rows -->
     <script>
         document.addEventListener("DOMContentLoaded", function () {
             const rows = document.querySelectorAll("table tbody tr");
 
             rows.forEach((row, index) => {
-                const firstNameCell = row.querySelector("td:nth-child(2)"); // Select the second cell (First Name)
+                const firstNameCell = row.querySelector("td:nth-child(2)"); // Select the second column (First Name)
                 if (firstNameCell) {
                     const name = firstNameCell.textContent.trim();
-                    const firstChar = name.charAt(0).toUpperCase(); // First letter in uppercase
+                    const firstChar = name.charAt(0).toUpperCase(); 
 
-                    // Highlight row if the first name starts with 'J' (or any letter of your choice)
-                    if (firstChar === "A") {
-                        row.style.color = "red"; // Dark red text color
+                    // Highlight row if the first name starts with 'J'
+                    if (firstChar === "J") {
+                        row.style.color = "red";
                     }
                 }
             });
@@ -62,17 +74,4 @@
     </script>
 
 }
-else
-{
-    <p>No records found.</p>
-}
 
-<!-- JavaScript to remove row -->
-<script>
-    function deleteRow(button) {
-        const row = button.closest('tr');
-        if (row) {
-            row.remove();
-        }
-    }
-</script>

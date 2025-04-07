@@ -3,26 +3,49 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet"> <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="/Content/StyleSheet1.css"> <!-- External CSS reference -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet"> 
+    <link rel="stylesheet" href="/Content/StyleSheet1.css"> 
     <title>Person 1 - Jose Edu</title>
 </head>
 <body>
 
-    <div class="menu">
-        <ul class="nav">
-            <li><a href="/Home/SimpleStart" class="menu-link" id="link1">Main Menu</a></li>
-            <li><a href="/People/PeopleList" class="menu-link" id="link3">People List</a></li>
-            <li><a href="/HTML/Person1Page.html" class="menu-link" id="link3">Person 01</a></li>
-            <li><a href="/HTML/Person2Page.html" class="menu-link" id="link4">Person 02</a></li>
-            <li><a href="/HTML/Person3Page.html" class="menu-link" id="link5">Person 03</a></li>
-            <li><a href="/HTML/Person4Page.html" class="menu-link" id="link6">Person 04</a></li>
-            <li><a href="/HTML/Person5Page.html" class="menu-link" id="link7">Person 05</a></li>
-            <li><a href="javascript:history.back();" class="menu-link" id="link8">Back</a></li>
-        </ul>
-    </div>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container">
+            <a class="navbar-brand" href="#"></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/Home/SimpleStart" id="link1">Main Menu</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/People/PeopleList" id="link3">People List</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/HTML/Person1Page.html" id="link3">Person 01</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/HTML/Person2Page.html" id="link4">Person 02</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/HTML/Person3Page.html" id="link5">Person 03</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/HTML/Person4Page.html" id="link6">Person 04</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/HTML/Person5Page.html" id="link7">Person 05</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="javascript:history.back();" id="link8">Back</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
 
-    <!-- Single container for all sections -->
     <div class="container mt-5">
         <div class="row">
             <!-- Biography and Background Section -->
@@ -76,18 +99,16 @@
         </div>
     </div>
 
-    <!-- Bootstrap and jQuery JS -->
+  
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
     <!-- JavaScript to manage active link and dynamic behavior -->
     <script>
-        const links = document.querySelectorAll('.menu-link');
+        const links = document.querySelectorAll('.nav-link');
         links.forEach(link => {
             link.addEventListener('click', () => {
-                // Remove 'active-link' class from all links
                 links.forEach(link => link.classList.remove('active-link'));
-                // Add 'active-link' to the clicked link
                 link.classList.add('active-link');
             });
         });

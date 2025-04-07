@@ -4,7 +4,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- Bootstrap 3 CSS (for panel support) -->
+    
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="/Content/StyleSheet1.css">  <!-- External CSS -->
 
@@ -12,7 +12,7 @@
 </head>
 <body>
 
-    <!-- Menu -->
+  
     <div class="menu">
         <ul class="nav nav-pills">
             <li><a href="/Home/SimpleStart" class="menu-link" id="link1">Main Menu</a></li>
@@ -27,7 +27,7 @@
     </div>
 
     <div class="container">
-        <h1>More infor on this person</h1>
+        <h1>More info on this person</h1>
 
         <!-- Biography Panel -->
         <div class="panel panel-primary">
@@ -72,20 +72,17 @@
             </div>
         </div>
     </div>
+
    
-
-
-    <!-- Bootstrap and jQuery JS (for Bootstrap 3) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 
-    <!-- Active link behavior -->
     <script>
         const links = document.querySelectorAll('.menu-link');
         links.forEach(link => {
             link.addEventListener('click', () => {
-                links.forEach(link => link.classList.remove('active-link'));
-                link.classList.add('active-link');
+                links.forEach(link => link.classList.remove('active'));
+                link.classList.add('active');
             });
         });
 
@@ -93,7 +90,7 @@
             const currentUrl = window.location.href;
             links.forEach(link => {
                 if (currentUrl.includes(link.getAttribute('href'))) {
-                    link.classList.add('active-link');
+                    link.classList.add('active');
                 }
             });
         });
