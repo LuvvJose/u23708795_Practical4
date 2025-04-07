@@ -62,7 +62,7 @@
     margin-left: auto;
     margin-right: auto;
     width: 80%;
-    border: 10px solid purple;
+    border: 10px solid white;
     padding: 20px;
     background-color: white;
     border-radius: 5px;
@@ -147,3 +147,63 @@ img {
     img:hover {
         transform: scaleX(-1);
     }
+
+
+/* External CSS for styling boxes */
+
+/* Styling the boxes */
+.box {
+    border: 2px solid; /* Border color */
+    border-radius: 10px; /* Rounded corners */
+    padding: 20px; /* Padding inside the box */
+    background-color: #f8f9fa; /* Light background */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* Aligns content to the top */
+    min-height: 450px; /* Ensures each box has a minimum height, adjust this value as needed */
+    height: 100%; /* Makes sure the box fills the space */
+}
+
+    /* Ensuring that images are floated and text wraps around them */
+    .box img {
+        float: left; /* Floats the image to the left */
+        margin-right: 15px; /* Adds space between the image and the text */
+        max-width: 100%; /* Ensures the image is responsive */
+        height: auto; /* Maintains the aspect ratio */
+    }
+
+    /* Styling for the paragraph to ensure text wraps around the image */
+    .box p {
+        font-size: 1rem; /* Adjusted font size for text */
+        color: #333; /* Darker text color */
+        line-height: 1.6; /* Better spacing between lines of text */
+        clear: both; /* Clears the float after the image */
+    }
+
+/* Ensure all boxes have equal height */
+.row {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: stretch; /* Ensures that columns stretch to equal height */
+}
+
+.col-lg-4, .col-md-6 {
+    display: flex;
+    justify-content: flex-start; /* Align content to the top */
+    align-items: stretch; /* Ensures columns stretch to equal height */
+    height: 100%; /* Ensures the height of the columns are consistent */
+}
+
+/* Make the images properly responsive */
+.box img {
+    max-width: 100%; /* Makes images fit the container */
+    height: auto; /* Keeps aspect ratio */
+}
+
+/* Remove any margins or paddings that might cause extra space */
+body, html {
+    margin: 0;
+    padding: 0;
+}
