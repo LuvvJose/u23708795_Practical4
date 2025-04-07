@@ -8,8 +8,8 @@
 
 @if (Model != null && Model.Any())
 {
-    <table class="table table-striped">
-        <thead>
+    <table class="table table-bordered table-hover">
+        <thead class="table-dark">
             <tr>
                 <th>@Html.DisplayNameFor(model => model.StudentNumber)</th>
                 <th>@Html.DisplayNameFor(model => model.FirstName)</th>
@@ -29,8 +29,8 @@
                     <td>@Html.DisplayFor(modelItem => item.Email)</td>
                     <td>
                         <a href="@Url.Content(item.MyLink)"
-                           class="btn"
-                           style="background-color: purple; color: white; border: none;">
+                           class="btn btn-purple"
+                           style="background-color: #6a1b9a; color: white; border: none;">
                             LINK
                         </a>
                     </td>
@@ -41,16 +41,20 @@
             }
         </tbody>
     </table>
+
     <script>
         document.addEventListener("DOMContentLoaded", function () {
             const rows = document.querySelectorAll("table tbody tr");
 
-            rows.forEach((row) => {
-                const firstNameCell = row.children[1]; // Index 1 = First Name column
+            rows.forEach((row, index) => {
+                const firstNameCell = row.querySelector("td:nth-child(2)"); // Select the second cell (First Name)
                 if (firstNameCell) {
                     const name = firstNameCell.textContent.trim();
-                    if (name.charAt(0).toUpperCase() === "J") {
-                        row.style.color = "red";
+                    const firstChar = name.charAt(0).toUpperCase(); // First letter in uppercase
+
+                    // Highlight row if the first name starts with 'J' (or any letter of your choice)
+                    if (firstChar === "A") {
+                        row.style.color = "red"; // Dark red text color
                     }
                 }
             });
@@ -72,5 +76,3 @@ else
         }
     }
 </script>
-
-<!-- JavaScript to highlight rows where first name starts with "J" -->
