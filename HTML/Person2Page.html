@@ -3,14 +3,18 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/Content/StyleSheet1.css">  <!-- External CSS reference -->
+
+    <!-- Bootstrap 3 CSS (for panel support) -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/Content/StyleSheet1.css">  <!-- External CSS -->
+
     <title>Person 2 - Jane Doe</title>
 </head>
 <body>
 
-
+    <!-- Menu -->
     <div class="menu">
-        <ul class="nav">
+        <ul class="nav nav-pills">
             <li><a href="/Home/SimpleStart" class="menu-link" id="link1">Main Menu</a></li>
             <li><a href="/People/PeopleList" class="menu-link" id="link3">People List</a></li>
             <li><a href="/HTML/Person1Page.html" class="menu-link" id="link3">Person 01</a></li>
@@ -22,62 +26,65 @@
         </ul>
     </div>
 
-
-
-    <!-- Biography and Background -->
     <div class="container">
-        <h2>Biography and Background</h2>
-        <div class="FirstBlock">
-            <img src="Images/black-widow-1.jpg">
-            <p>Jane was born in Gauteng, and went to school in Dorrito College. She studies Law because there is too many criminals.</p>
+        <h1>More infor on this person</h1>
+
+        <!-- Biography Panel -->
+        <div class="panel panel-primary">
+            <div class="panel-heading"><h3 class="panel-title">Biography and Background</h3></div>
+            <div class="panel-body">
+                <img src="Images/black-widow-1.jpg" class="img-responsive pull-left" style="margin-right: 15px; max-width: 200px;">
+                <p>Jane was born in Gauteng, and went to school in Dorrito College. She studies Law because there are too many criminals.</p>
+            </div>
         </div>
-    </div>
 
-    <!-- Hobbies -->
-    <div class="container">
-        <h2>Hobbies</h2>
-        <div class="SecondBlock">
-            <p>Jane enjoys reading books</p>
-            <img src="Images/CartoonBook.jpg">
+        <!-- Hobbies Panel -->
+        <div class="panel panel-success">
+            <div class="panel-heading"><h3 class="panel-title">Hobbies</h3></div>
+            <div class="panel-body">
+                <img src="Images/CartoonBook.jpg" class="img-responsive pull-left" style="margin-right: 15px; max-width: 200px;">
+                <p>Jane enjoys reading books. She particularly likes fiction and fantasy novels.</p>
+            </div>
         </div>
-    </div>
 
-    <!-- Modules -->
-
-    <div class="container">
-
-        <div class="modules">
-            <h2>Modules</h2>
-
-            <div class="modules-container">
-                <div class="column">
-                    <h3>Modules Semester 1</h3>
-                    <ul>
-                        <li>Law 1</li>
-                        <li>Law 12</li>
-                        <li>Law 18</li>
-                    </ul>
-                </div>
-                <div class="column">
-                    <h3>Modules Semester 2</h3>
-                    <ul>
-                        <li>Law 2</li>
-                        <li>Law 22</li>
-                        <li>Law 28</li>
-                    </ul>
+        <!-- Modules Panel -->
+        <div class="panel panel-info">
+            <div class="panel-heading"><h3 class="panel-title">Modules</h3></div>
+            <div class="panel-body">
+                <div class="modules-container">
+                    <div class="column">
+                        <h3>Modules Semester 1</h3>
+                        <ul>
+                            <li>Law 1</li>
+                            <li>Law 12</li>
+                            <li>Law 18</li>
+                        </ul>
+                    </div>
+                    <div class="column">
+                        <h3>Modules Semester 2</h3>
+                        <ul>
+                            <li>Law 2</li>
+                            <li>Law 22</li>
+                            <li>Law 28</li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
+   
 
-    <!-- JavaScript to manage active link and dynamic behavior -->
+
+    <!-- Bootstrap and jQuery JS (for Bootstrap 3) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+    <!-- Active link behavior -->
     <script>
         const links = document.querySelectorAll('.menu-link');
         links.forEach(link => {
             link.addEventListener('click', () => {
-                // Remove 'active-link' class from all links
                 links.forEach(link => link.classList.remove('active-link'));
-                // Add 'active-link' to the clicked link
                 link.classList.add('active-link');
             });
         });
@@ -89,6 +96,8 @@
                     link.classList.add('active-link');
                 }
             });
-        });</script>
+        });
+    </script>
+
 </body>
 </html>
